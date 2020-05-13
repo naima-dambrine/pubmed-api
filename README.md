@@ -12,6 +12,8 @@ Features
 
 **Note**: Use python 3
 
+![](images/screenshot.png)
+
 Setup
 -----
 ```
