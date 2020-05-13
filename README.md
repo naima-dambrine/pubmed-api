@@ -7,7 +7,7 @@ Use from the command-line.
 
 Features
 --------
-* multi-criteria search
+* Multi-criteria search
 * Download articles from PubMed Central (free version)
 * Export results in csv file (in a separate folder named PDF)
 
