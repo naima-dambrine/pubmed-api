@@ -95,12 +95,11 @@ search by keywords and  specifie keyword operator
 ./pubmed.py -k "nipah bats" -k "other" -k "another" -ko OR
 >>( (nipah bats)    OR    (other) OR (another) )
 
-search by free syntax if familiar
+search by free syntax if familiar : search by author AND date fixed from 2017 to present
 ./pubmed.py -f "(Firstname, Lastname[Author])  AND  (2017[Date - Publication] : "3000"[Date - Publication])"
->> search by author AND date fixed from 2017 to present
 
+search by multiple keywords , fix keyword operator to OR (AND is default) , fix general operator to NOT 
 ./pubmed.py  -k "nipah bats" -k "dffddfdf"  -k "dssdds" -a "Firstname,Lastname" -ko OR -a "Firstname, Lastname" -o NOT
->> search by multiple keywords , fix keyword operator to OR (AND is default) , fix general operator to NOT :
 >>( ( (nipah bats) OR (dffddfdf) OR (dssdds) ) ) NOT ( (Firstname, Lastname[Author]) ) 
 
 
