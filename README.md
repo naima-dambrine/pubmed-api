@@ -8,8 +8,8 @@ Use from the command-line.
 Features
 --------
 * Multi-criteria search
-* Download articles from PubMed Central (free version)
-* Export results in csv file (in a separate folder named PDF)
+* Download articles from PubMed Central (free version) in a separate folder called PDF
+* Export results in csv file 
 
 **Note**: Use python 3
 
@@ -36,6 +36,22 @@ And repeat
 ```
 until finished
 ```
+### Generate an Excel File
+
+An Excel file is automatically generated with the columns below. 
+The management of duplicates is also ensured when you launch the program several times
+
+* `pmid` : PubMed ID
+* `date_publication` : Article's date of publication
+* `first_author` : First author
+* `author_list` : list of authors 
+* `publication_type` : Type of publication
+* `journal` : Journal name
+* `source` : Source
+* `volume` : Volume
+* `pagination` : Pagination
+* `abstract` : Article's abstract
+* `doi` : DOI of the article
 
 Usage
 -----
