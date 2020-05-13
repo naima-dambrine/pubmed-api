@@ -26,20 +26,27 @@ pubmed.py [-h] [-a AUTHOR] [-k [KEYWORDS]] [-o {AND,OR,NOT}]
 PubMed - Search and Download papers for you. Don't waste your time ;-)
 
 optional arguments:
+
 -h, --help            
 >>show this help message and exit
+
 -a AUTHOR, --author AUTHOR
 >>tries to find and download papers by author. Exemple :
 "Firstname J"
+
 -k [KEYWORDS], --keywords [KEYWORDS]
 >>tries to find and download papers by terms. Exemple :
 "nipah bats"
+
 -o {AND,OR,NOT}, --operator {AND,OR,NOT}
 >>general operator. choose from : "OR", "AND", "NOT"
+
 -ko {AND,OR,NOT}, --keywordsoperator {AND,OR,NOT}
 >>keywords operator. choose from : "OR", "AND", "NOT"
+
 -d DATE, --date DATE  
 >>tries to find and download papers by date. YYYY/MM/DD
+
 -f FREESYNTAXE, --freesyntaxe FREESYNTAXE
 >>Free Syntax. Exclusive argument
 
