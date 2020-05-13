@@ -33,7 +33,7 @@ The management of duplicates is also ensured when you launch the program several
 * `pmid` : PubMed ID
 * `date_publication` : Article's date of publication
 * `first_author` : First author
-* `author_list` : list of authors 
+* `author_list` : List of authors 
 * `publication_type` : Type of publication
 * `journal` : Journal name
 * `source` : Source
