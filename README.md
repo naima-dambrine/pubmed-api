@@ -24,13 +24,12 @@ pip3 install -r requirements.txt
 ```
 ### Generates a PDF directory 
 
-A directory called `PDF` is created if not exist. All downloaded articles will be stored there.
-
+A directory `PDF` will be created if it does not already exist. All downloaded articles will be stored there.
 
 ### Generates an Excel File
 
 An Excel file is automatically generated with the columns below. 
-The management of duplicates is also ensured when you launch the program several times
+The management of duplicates is also ensured if you launch the program several times
 
 * `pmid` : PubMed ID
 * `date_publication` : Article's date of publication
