@@ -2,13 +2,14 @@ pubmed.py
 =========
 
 pubmed.py is an unofficial API for pubmed. 
-pubmed.py can search for papers on PUBMED and download PDF papers if exist in PMC(PubMed Central). 
+pubmed.py can search for papers on PUBMED and download PDF papers if exist in PMC (PubMed Central). 
 Use from the command-line.
 
 Features
 --------
-* Download articles from PubMed Central 
-* Export results in csv file
+* multi-criteria search
+* Download articles from PubMed Central (free version)
+* Export results in csv file (in a separate folder named PDF)
 
 **Note**: Use python 3
 
