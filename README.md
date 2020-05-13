@@ -13,12 +13,13 @@ Features
 * Download articles from PubMed Central (free version) in a separate folder called PDF
 * Export results in csv file 
 
-**Note**: Use python 3
+
 
 ![](images/screenshot.png)
 
 Setup
 -----
+**Note**: Use python 3
 ```
 pip3 install -r requirements.txt
 ```
