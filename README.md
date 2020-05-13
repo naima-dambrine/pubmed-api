@@ -104,4 +104,4 @@ search by free syntax if familiar
 
 ## License
 
-This project is licensed under the MIT License 
+MIT License Copyright (c) 2015-2020 Naïma Dambrine
