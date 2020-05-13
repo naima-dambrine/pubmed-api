@@ -20,8 +20,12 @@ Setup
 ```
 pip3 install -r requirements.txt
 ```
+### Generates a PDF directory 
 
-### Generate an Excel File
+A directory called `PDF` is created if not exist. All downloaded articles will be stored there.
+
+
+### Generates an Excel File
 
 An Excel file is automatically generated with the columns below. 
 The management of duplicates is also ensured when you launch the program several times
