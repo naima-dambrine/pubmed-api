@@ -80,7 +80,11 @@ search by free syntax if familiar
 >> search by multiple keywords , fix keyword operator to OR (AND is default) , fix general operator to NOT :
 >>( ( (nipah bats) OR (dffddfdf) OR (dssdds) ) ) NOT ( (Firstname, Lastname[Author]) ) 
 
-```
-License
--------
-MIT
+
+## Authors
+
+* **Naïma Dambrine** 
+
+## License
+
+This project is licensed under the MIT License 
