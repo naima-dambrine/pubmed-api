@@ -74,16 +74,15 @@ from urllib.error import URLError
 
 #CONSTANTS
 CSV_FILE_NAME = "pubmed.csv"
-# TXT_LIST_PMID = "pmid.txt"
 UPLOAD_DIRECTORY="PDF"
 PUBMED_URL="https://www.ncbi.nlm.nih.gov/pubmed/"
 HEADERS = {'User-Agent': 'Mozilla/5.0'}
 
 class PubMed():
 	"""
-    PubMed class can search for papers on PubMed
-    export results in csv file and download papers from PubMedCentral (PMC)
-    """
+	PubMed class can search for papers on PubMed
+	export results in csv file and download papers from PubMedCentral (PMC)
+	"""
 	term=''
 
 	def __init__(self):
@@ -91,21 +90,21 @@ class PubMed():
 
 	def directory(self, UPLOAD_DIRECTORY):
 		"""
-        @brief      Creates directory if not exists .
+		@brief      Creates directory if not exists .
 		@param      UPLOAD_DIRECTORY   directory name to create
 		@return     { Creates a directory to store PDF}
-        """
+		"""
 		if not os.path.exists(UPLOAD_DIRECTORY):
 			os.mkdir(UPLOAD_DIRECTORY)
 		return UPLOAD_DIRECTORY
 
 	def _get_total_review(self, term):
 		"""
-        @brief      Returns total result .
+		@brief      Returns total result .
 		@param      self   The object
 		@param      term   Search criteria
 		@return     { Returns total of papers matching the search criteria}
-        """
+		"""
 		Entrez.email = "me@wonderful.wordl.fr"
 		try:
 			handle = Entrez.esearch(db="pubmed", term=term)
@@ -129,11 +128,11 @@ class PubMed():
 
 	def _get_pmid_from_previous(self):
 		"""
-        @brief      Get list of PMID from csv file if exists
+		@brief      Get list of PMID from csv file if exists
 		@param      self   The object
 		@param      data   List of all PMID
 		@return     { Return list of PMID so as not to reprocess them afterwards}
-        """
+		"""
 		previous=[]
 		if os.path.exists(CSV_FILE_NAME):
 			with open(CSV_FILE_NAME) as f:
@@ -143,11 +142,11 @@ class PubMed():
 
 	def _get_all_pmid(self, term):
 		"""
-        @brief      Gets all PMID matching the search criteria
+		@brief      Gets all PMID matching the search criteria
 		@param      self   The object
 		@param      term   Search criteria
 		@return     { Returns all PMID from PubMed and returns results in list}
-        """
+		"""
 		ids=[]
 		retmax = self._get_total_review(term)
 		if retmax == 0:
@@ -172,11 +171,11 @@ class PubMed():
 
 	def _merge_result(self, newList):
 		"""
-        @brief      Merge results between current and previous search
+		@brief      Merge results between current and previous search
 		@param      self   The object
 		@param      newList   List of PMID
 		@return     { Returns PMID merged list }
-        """
+		"""
 		previous = self._get_pmid_from_previous()
 		current = newList
 		if len(previous) > 0:
@@ -187,10 +186,10 @@ class PubMed():
 
 	def request_safely(self, req):
 		"""
-        @brief      Performs a request .
+        	@brief      Performs a request .
 		@param      self   The object
 		@return     { Performs request on pubmed throw exceptions}
-        """
+        	"""
 		try:
 			page = urlopen(req).read()
 		except URLError as e:
@@ -208,11 +207,11 @@ class PubMed():
 
 	def download(self, url,pmid):
 		"""
-        @brief      Download article PDF .
+		@brief      Download article PDF .
 		@param      self   The object
 		@param      pmid  The items are list of results search by term
 		@return     { Performs a query on pubmed and download PDF }
-        """
+		"""
 		rq = Request(url, headers=HEADERS)
 		res = self.request_safely(rq)
 		if res:
@@ -229,7 +228,7 @@ class PubMed():
 		@param      self   The object
 		@param      idlist List of PMID
 		@return     { Performs a query on pubmed, stores results in list }
-        """
+		"""
 
 		records=""
 
@@ -296,7 +295,6 @@ class PubMed():
 								if 'pmc' in str(l):
 									print('PMC link finded ... Trying to get PDF')
 									pmc_url = l.get('href')
-									# pmc_url = soup.find('img', {'alt' : 'Icon for PubMed Central'}).find_previous('a')['href']
 									req = Request(pmc_url,  headers={'User-Agent': 'Mozilla/5.0'} )
 									page = self.request_safely(req)
 									if page:
