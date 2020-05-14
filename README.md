@@ -133,4 +133,4 @@ search by multiple keywords , fix keyword operator to OR (AND is default) , fix 
 
 ## License
 
-MIT License Copyright (c) 2015-2020 Naïma Dambrine
+MIT License Copyright (c) 2020 Naïma Dambrine
