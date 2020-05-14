@@ -89,9 +89,9 @@ search by date
 ```
 ./pubmed.py -d "2017"
 
->>(2017/01[Date - Publication] : "3000"[Date - Publication])
-
 ./pubmed.py -d "2017/01"
+
+>>(2017/01[Date - Publication] : "3000"[Date - Publication])
 
 >>From 2017/01 to Present
 ```
