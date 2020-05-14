@@ -33,7 +33,7 @@ An Excel file is automatically generated with the columns below.
 The management of duplicates is also ensured if you launch the program several times
 
 * `pmid` : PubMed ID
-* `date_publication` : Article's date of publication
+* `publication_year` : Publication year
 * `first_author` : First author
 * `author_list` : List of authors 
 * `publication_type` : Type of publication
