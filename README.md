@@ -107,9 +107,9 @@ search by keywords
 
 search by keywords and  specifie keyword operator
 ```
-./pubmed.py -k "nipah bats" -k "other" -k "another" -ko OR
+./pubmed.py -k "nipah bats" -k "another" -k "keyword" -ko OR
 
->>( (nipah bats)    OR    (other) OR (another) )
+>>( (nipah bats)    OR    (another) OR (keyword) )
 ```
 
 
@@ -121,11 +121,10 @@ search by free syntax if familiar : search by author AND date fixed from 2017 to
 
 search by multiple keywords , fix keyword operator to OR (AND is default) , fix general operator to NOT 
 ```
-./pubmed.py  -k "nipah bats" -k "dffddfdf"  -k "dssdds" -a "Firstname,Lastname" -ko OR -a "Firstname, Lastname" -o NOT
+./pubmed.py  -k "nipah bats" -k "keyword2"  -k "keyword3" -a "Firstname,Lastname" -ko OR -a "Firstname, Lastname" -o NOT
 
->>( ( (nipah bats) OR (dffddfdf) OR (dssdds) ) ) NOT ( (Firstname, Lastname[Author]) ) 
+>>( ( (nipah bats) OR (keyword2) OR (keyword3) ) ) NOT ( (Firstname, Lastname[Author]) ) 
 ````
-
 
 ## Authors
 
