@@ -10,7 +10,7 @@ Use from the command-line.
 Features
 --------
 * Multi-criteria search
-* Download articles from PubMed Central (free version) in a separated folder
+* Download articles from PubMed Central (free version)
 * Export results in csv file 
 
 
